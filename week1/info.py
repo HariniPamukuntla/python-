@@ -1,0 +1,6 @@
+n=input("Enter your Name:")
+m=input("Enter your mail ID:")
+p=int(input("Enter your phone number:"))
+print(n)
+print(m)
+print(p)
