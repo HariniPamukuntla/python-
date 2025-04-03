@@ -1,0 +1,20 @@
+bal=int(input("Enter your balance"))
+def credit(bal,y):
+    bal=bal+y
+    print(bal)
+def debit(bal,y):
+    bal=bal-y
+    print(bal)
+while True:
+    x=int(input("Press 1 for credit or 2 for debit"))
+    if x == 1:
+        y=int(input("enter amount"))
+        credit(bal,y)
+        # break
+    elif x == 2:
+        y=int(input("enter amount"))
+        debit(bal,y)
+        # break
+    else:
+        print("Press 1 for credit or press 2 for debit")
+        break
