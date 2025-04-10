@@ -1,0 +1,67 @@
+def example(l,length):
+    
+    for i in range(length):
+        temp=int(input("Enter the element"))
+        l.append(temp)
+    return l
+    
+def even(l,length):
+    sum=0
+    for i in range(length):
+        if l[i] % 2==0:
+            sum = sum+l[i]
+    return sum
+    
+def odd(l,length):
+    sum=0
+    for i in range(length):
+        if l[i] % 2==1:
+            sum= sum+l[i]
+    return sum
+
+def mul(l,length):
+    mul1=even(l,length)
+    mul2=odd(l,length)
+    product = mul1 * mul2
+    return product
+
+length1=int(input("Enter the lenth 1"))
+length2=int(input("Enter the length 2"))
+length3=int(input("Enter the length 3"))
+
+
+l1=[]
+l2=[]
+l3=[]
+
+
+x = example(l1,length1)
+print(x)
+y=example(l2,length2)
+print(y)
+z=example(l3,length3)
+print(z)
+
+print("sum of even")
+E1=even(l1,length1)
+print(E1)
+E2=even(l2,length2)
+print(E2)
+E3=even(l3,length3)
+print(E3)
+        
+print("sum of odd")
+O1=odd(l1,length1)
+print(O1)
+O2=odd(l2,length2)
+print(O2)
+O3=odd(l3,length3)
+print(O3)
+        
+print("multiplication of even and odd")
+m1=mul(l1,length1)
+print(m1)  
+m2=mul(l2,length2)
+print(m2)
+m3=mul(l3,length3)
+print(m3)      
