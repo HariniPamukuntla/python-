@@ -1,0 +1,46 @@
+def credit(bal,transactions,y):
+    bal+=y
+    transactions.append(y)
+    print(y,"credited successfully")
+    return bal,transactions
+
+def debit(bal,transactions,y):
+    if bal<y:
+        print("Amount not sufficient")
+    else:
+        bal-=y
+        transactions.append(-y)
+        print(y,"debited successfully..!!")
+        return bal,transactions
+
+def last_five_transactions(transactions):
+    print("Last five transactions..!!")
+    for transaction in transactions[-5:]:
+        print(transactions)
+
+bal=0
+transactions=[]
+while True:
+    print("\nchoose an option: ")
+    print("Enter 1 for Credit")
+    print("Enter 2 for Debit")
+    print("Enter 3 for last five Transactions")
+    print("Enter 4 for balance")
+    print("Enter 5 to Exit")
+    x=int(input("Enter your choice : "))
+    if x == 1:
+        y=int(input("enter amount"))
+        bal,transactions=credit(bal,transactions,y)
+        #break
+    elif x == 2:
+        y=int(input("enter amount"))
+        bal,transactions=debit(bal,transactions,y)
+        #break
+    elif x == 3:
+        last_five_transactions(transactions)
+    elif x == 4:
+        print("Total balance : ",bal)
+        
+    else:
+        print("Exiting! Thankyou..!!")
+        break
