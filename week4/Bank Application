@@ -1,7 +1,7 @@
 def credit(bal,transactions,y):
     bal+=y
     transactions.append(y)
-    print(y,"credited successfully")
+    print(y,"₹ credited successfully")
     return bal,transactions
 
 def debit(bal,transactions,y):
@@ -10,7 +10,7 @@ def debit(bal,transactions,y):
     else:
         bal-=y
         transactions.append(-y)
-        print(y,"debited successfully..!!")
+        print(y,"₹ debited successfully..!!")
         return bal,transactions
 
 def last_five_transactions(transactions):
@@ -30,11 +30,11 @@ while True:
     print("Enter 5 to Exit")
     x=int(input("Enter your choice : "))
     if x == 1:
-        y=int(input("enter amount"))
+        y=int(input("enter amount to credit : "))
         bal,transactions=credit(bal,transactions,y)
         #break
     elif x == 2:
-        y=int(input("enter amount"))
+        y=int(input("enter amount to debit :"))
         bal,transactions=debit(bal,transactions,y)
         #break
     elif x == 3:
