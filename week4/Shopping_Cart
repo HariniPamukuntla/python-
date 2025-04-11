@@ -1,0 +1,35 @@
+def add_cart(cart,item,prices,x,y):
+    cart.append(x)
+    item.append(x)
+    prices.append(y)
+    print("Item added : ",item)
+    print("Price of item : ",prices)
+    return cart,item,prices
+    
+def view_cart(cart):
+    for carts in cart[5:]:
+        print(cart)
+        break
+
+        
+    
+
+cart=[]
+item=[]
+prices=[]
+while True:
+    print("enter 1 to add")
+    print("enter 2 to view")
+    print("enter 3 to exit")
+    choice=int(input("\nenter your choice : "))
+    if choice==1:
+        x=input("Enter item : ")
+        y=int(input("Enter the price : "))
+        cart,item,prices=add_cart(cart,item,prices,x,y)
+        #break
+    elif choice==2:
+        print("Items in cart : ",cart)
+         print("Total price of items : ",prices)
+        #break
+    else:
+        break
