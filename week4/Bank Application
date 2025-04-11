@@ -14,9 +14,10 @@ def debit(bal,transactions,y):
         return bal,transactions
 
 def last_five_transactions(transactions):
-    print("Last five transactions..!!")
+    print("Last five transactions :")
     for transaction in transactions[-5:]:
         print(transactions)
+        break
 
 bal=0
 transactions=[]
