@@ -1,4 +1,45 @@
+def add_cart(cart,item,prices,x,y):
+    cart.append(x)
+    item.append(x)
+    prices.append(y)
+    print("\nItem added : ",x)
+    print("Price of item : ₹",y)
+    return cart,item,prices
+    
 
+def Total(prices):
+    sum=0
+    for i in range(len(prices)):
+        sum=sum+prices[i]
+    print("\nTotal amount : ₹",sum)
+    return prices
+        
+    
+#main code    
+cart=[]
+item=[]
+prices=[]
+while True:
+    print("\nEnter 1 to add")
+    print("Enter 2 to view")
+    print("Enter 3 for Total amount")
+    print("Enter 4 to Exit")
+    choice=int(input("enter your choice : "))
+    if choice==1:
+        x=input("Enter item : ")
+        y=int(input("Enter the price : ₹"))
+        cart,item,prices=add_cart(cart,item,prices,x,y)
+        #break
+    elif choice==2:
+        print("\nItems in cart : ",cart)
+        print("Total price of items : ",prices)
+        #break
+    elif choice==3:
+        prices=Total(prices)
+        
+    else:
+        print("\n We are exiting...ThankYou!!!")
+        break
 
         
     
