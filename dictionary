@@ -1,0 +1,10 @@
+d={}
+a={}
+size=int(input("enter the size"))
+for i in range (size):
+    key=int(input("enter key: "))
+    value=input("Enter value :")
+    d[key]=value
+    a[value]=key
+print(d)
+print(a)
